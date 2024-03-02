@@ -12,9 +12,9 @@ const showMain = () => {
   document.getElementById("main").style.display = "block";
 }
 
-// showIntro();
-// Delay(5400).then(() => {
-//   eel.PrintPyLog("Showing", "Main Div")
-//   showMain();
-// })
-showMain();
+showIntro();
+Delay(5400).then(() => {
+  eel.PrintPyLog("Showing", "Main Div")
+  showMain();
+})
+// showMain();
