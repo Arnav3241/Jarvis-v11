@@ -12,7 +12,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "client = Client()\nresponse = client.chat.completions.create(\n    model=\"gpt-3.5-turbo\",\n    messages=[{\"role\": \"user\", \"content\": \"Hello\"}]\n)\nprint(response.choices[0].message.content)",
+        "peekOfCode": "client = Client()\nresponse = client.chat.completions.create(\n    model=\"gpt-3.5-turbo\",\n    messages=[{\"role\": \"user\", \"content\": \"Hello\"}]\n)\nprint(response.choices[0].message.content)\nprint(\"Hello\")",
         "detail": "main",
         "documentation": {}
     },
@@ -21,7 +21,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "response = client.chat.completions.create(\n    model=\"gpt-3.5-turbo\",\n    messages=[{\"role\": \"user\", \"content\": \"Hello\"}]\n)\nprint(response.choices[0].message.content)",
+        "peekOfCode": "response = client.chat.completions.create(\n    model=\"gpt-3.5-turbo\",\n    messages=[{\"role\": \"user\", \"content\": \"Hello\"}]\n)\nprint(response.choices[0].message.content)\nprint(\"Hello\")",
         "detail": "main",
         "documentation": {}
     }
