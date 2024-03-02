@@ -1,0 +1,28 @@
+[
+    {
+        "label": "Client",
+        "importPath": "g4f.client",
+        "description": "g4f.client",
+        "isExtraImport": true,
+        "detail": "g4f.client",
+        "documentation": {}
+    },
+    {
+        "label": "client",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "client = Client()\nresponse = client.chat.completions.create(\n    model=\"gpt-3.5-turbo\",\n    messages=[{\"role\": \"user\", \"content\": \"Hello\"}]\n)\nprint(response.choices[0].message.content)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "response",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "response = client.chat.completions.create(\n    model=\"gpt-3.5-turbo\",\n    messages=[{\"role\": \"user\", \"content\": \"Hello\"}]\n)\nprint(response.choices[0].message.content)",
+        "detail": "main",
+        "documentation": {}
+    }
+]
