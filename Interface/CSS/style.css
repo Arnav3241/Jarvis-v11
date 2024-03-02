@@ -1,0 +1,74 @@
+@keyframes LogoImgIntroAnimation {
+    0%   {left:-100px; top:0px;}
+    100%  {left:0px; top:0px;}
+}
+
+@keyframes Int1Animation {
+    0%   {left:140px; top:0px;}
+    100%  {left:0px; top:0px;}
+}
+
+@keyframes Int2Animation {
+    0%   {left:140px; top:0px;}
+    100%  {left:0px; top:0px;}
+}
+  
+
+#LogoImgIntro {
+    position: relative;
+    animation-name: LogoImgIntroAnimation;
+    animation-duration: 4s;
+}
+
+#Int1 {
+    font-family: "Anta", sans-serif;
+    position: relative;
+    animation-name: Int1Animation;
+    animation-duration: 4s;
+}
+
+#Int2 {
+    position: relative;
+    animation-name: Int2Animation;
+    animation-duration: 4s;
+    font-family: "Protest Riot", sans-serif;
+}
+
+#Title {
+    position: relative;
+    animation-name: LogoImgIntroAnimation;
+    animation-duration: 1s;
+}
+
+#t1 {
+    position: relative;
+    animation-name: LogoImgIntroAnimation;
+    animation-duration: 1.7s;
+}
+
+#t2 {
+    position: relative;
+    animation-name: LogoImgIntroAnimation;
+    animation-duration: 2.4s;
+}
+
+#t3 {
+    position: relative;
+    animation-name: LogoImgIntroAnimation;
+    animation-duration: 3.1s;
+}
+
+#t4 {
+    position: relative;
+    animation-name: LogoImgIntroAnimation;
+    animation-duration: 3.8s;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+
+#title-text {
+    font-family: "Anta", sans-serif;
+}

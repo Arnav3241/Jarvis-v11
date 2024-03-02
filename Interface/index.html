@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="CSS/Tailwind.js"></script>
+  <link rel="icon" href="Logo.png">
+  <link rel="stylesheet" href="CSS/style.css">
+  <title>Jarvis</title>
+  <script type="text/javascript" src="/eel.js"></script>
+  <script type="text/javascript" src="JS/eelCode.js"></script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Anta&family=Protest+Riot&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0" />
+  </script>
+
+  <!-- Tainwind CSS Configeration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: { 'gradient': 'gradient 8s linear infinite', },
+          keyframes: { 'gradient': { to: { 'background-position': '200% center' }, } }
+        },
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <div id="intro" class="text-4xl w-{100%] text-slate-200 Intro bg-[#131314] flex items-center justify-center h-screen">
+    <div class="flex justify-center items-center h-screen">
+      <div class=" p-5 rounded-xl flex">
+        <img id="LogoImgIntro" src="Assets/Logo.png" class="rounded-full w-[350px] h-[350px]" alt="Logo">
+        <div class="flex h-[350px items-center p-12">
+          <div class="h-[120px]">
+            <h1 id="Int1" class="text-[8.25rem] font-bold">Jarvis</h1>
+            <h2 id="Int2" class="text-3xl mt-12 font-light">🤖 Your very own personal AI Assistant.</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="main" class="h-[100vh] w-[100vw] text-slate-200 Main bg-[#131314]">
+    <div id="Sidebar" class="w-[64px] z-10 h-[100vh] bg-[#1e1f20] absolute left-0">
+      <img src="Assets/Logo.png" class="me-3 w-[58px] rounded-full m-2" alt="Jarvis" />
+      <div class="flex -rotate-90 relative mt-[570px] w-[10vh] ">
+        <p id="title-text" class="text-transparent text-4xl font-bold px-3 bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-500 bg-clip-text bg-[linear-gradient(to_right,#818cf8,#e0e7ff,#38bdf8,#e879f9,#38bdf8,#e0e7ff,#818cf8)]"> Jarvis </p>
+        <!-- <p id="title-text" class="text-4xl font-bold px-3 text-slate-400"> Jarvis </p> -->
+      </div>
+    </div>
+    <div id="Main_Window" class="w-full z-0 pl-[100px] p-[20px] h-[100vh] absolute right-0">
+      <div class="flex">
+        <div class="bg-red-600 h-[94vh] w-[60vw]">
+          <div class="h-[6.5vh] w-[100%] bg-blue-600"></div>
+          <div class="h-[3.8vh] w-[100%] bg-yellow-600"></div>
+          <div class="h-[75vh] w-[100%] bg-green-600 flex">
+            <div class="h-[75vh] w-[90%] bg-blue-300"></div>
+            <div class="h-[75vh] w-[10%] bg-yellow-900"></div>
+          </div>
+          <div class="w-[100%] h-[9vh] bg-orange-200"></div>
+        </div>
+        <div class="bg-red-800 h-[94vh] w-[30vw] ml-6">
+          <div class="h-[10vh] w-[100%] bg-blue-600"></div>
+          <div class="h-[12vh] w-[100%] bg-yellow-600"></div>
+          <div class="h-[72vh] w-[100%] bg-blue-400"></div>
+        </div>
+      </div>
+    </div>
+    <div id="wake_window" class="">
+      
+    </div>
+  </div>
+  <script type="text/javascript" src="Js/script.js"></script>
+</body>
+
+</html>

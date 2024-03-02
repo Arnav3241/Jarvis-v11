@@ -1,10 +1,24 @@
-from g4f.client import Client
+from Interface.IF import *
+from pygame import mixer
+import pvporcupine
+import keyboard
+import pyaudio
+import struct
+import eel
 
-client = Client()
-response = client.chat.completions.create(
-    model="gpt-3.5-turbo",
-    messages=[{"role": "user", "content": "Hello"}]
-)
-print(response.choices[0].message.content)
+#? Recomendations:
+# https://groq.com/
 
-# print("Hello")
+#? Some important inits
+eel.init("Interface")
+
+#? Main function
+
+@eel.expose
+def Jarvis():
+  ...
+
+#? Main Execution
+if __name__ == '__main__': 
+  try: eel.start("index.html") 
+  except: print("Jarvis has encountered a fatel error. Please try later."), exit()
