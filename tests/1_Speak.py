@@ -30,4 +30,15 @@ async def Speak(*args, Model: str = "echo", Speed: float = 0.80):
   print(response["URL"])
   PlayURL(response["URL"])
 
-while True: asyncio.run(Speak(input(">>>")))
+
+if __name__ == "__main__":
+  asyncio.run(Speak("Hello world"))
+  time.sleep(1)
+  asyncio.run(Speak("Video games are meant to immerse the player into a sort of virtual reality. We do this mainly visually, but it can make a massive difference and be a massive improvement to your game if you add sounds as well."))
+  time.sleep(20)
+  asyncio.run(Speak("Hello world"))
+  time.sleep(1)
+  asyncio.run(Speak("The above code will play the music file indefinitely (though you can call it to stop). The -1 signals PyGame to just play forever, but, if you put, say, a 5 in there, then the music would play once and 5 more times."))
+  time.sleep(20)
+
+# while True: asyncio.run(Speak(input(">>>")))
