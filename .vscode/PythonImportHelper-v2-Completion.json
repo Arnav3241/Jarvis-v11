@@ -185,15 +185,6 @@
         "documentation": {}
     },
     {
-        "label": "asyncio",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "asyncio",
-        "description": "asyncio",
-        "detail": "asyncio",
-        "documentation": {}
-    },
-    {
         "label": "requests",
         "kind": 6,
         "isExtraImport": true,
@@ -208,6 +199,24 @@
         "description": "requests",
         "isExtraImport": true,
         "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "asyncio",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "asyncio",
+        "description": "asyncio",
+        "detail": "asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "shutil",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "shutil",
+        "description": "shutil",
+        "detail": "shutil",
         "documentation": {}
     },
     {
@@ -427,11 +436,20 @@
         "documentation": {}
     },
     {
+        "label": "removeFilesfromFolder",
+        "kind": 2,
+        "importPath": "Tests.1_Speak",
+        "description": "Tests.1_Speak",
+        "peekOfCode": "def removeFilesfromFolder(folder:str):\n  for filename in os.listdir(folder):\n    file_path = os.path.join(folder, filename)\n    try:\n      if os.path.isfile(file_path) or os.path.islink(file_path):\n        os.unlink(file_path)\n      elif os.path.isdir(file_path):\n        shutil.rmtree(file_path)\n    except Exception as e:\n      print('Failed to delete %s. Reason: %s' % (file_path, e))",
+        "detail": "Tests.1_Speak",
+        "documentation": {}
+    },
+    {
         "label": "PlayURL",
         "kind": 2,
         "importPath": "Tests.1_Speak",
         "description": "Tests.1_Speak",
-        "peekOfCode": "def PlayURL(URL: str):\n  x = get(URL).content\n  name = f'.\\\\Music\\music{int(time.time())}.mp3'\n  with open(name,'wb') as file:\n    file.write(x)\n  mixer.music.load(name)\n  mixer.music.play()\nasync def Speak(*args, Model: str = \"echo\", Speed: float = 0.80):\n  message = \" \".join(args)\n  print(\"Making the URL\")",
+        "peekOfCode": "def PlayURL(URL: str):\n  tss = time.time()\n  x = get(URL).content\n  name = f'{os.getcwd()}\\Audio\\{int(time.time())}.mp3'\n  # removeFilesfromFolder(f'{os.getcwd()}\\Audio')\n  with open(name,'wb') as file:\n    file.write(x)\n  print(f\"Time taken to download the file: {time.time() - tss} seconds\")\n  tts = time.time()\n  mixer.music.load(name)",
         "detail": "Tests.1_Speak",
         "documentation": {}
     },
@@ -440,7 +458,7 @@
         "kind": 5,
         "importPath": "Tests.1_Speak",
         "description": "Tests.1_Speak",
-        "peekOfCode": "url = \"https://ttsmp3.com/makemp3_ai.php\"\nheaders = {'authority': 'ttsmp3.com','accept': '*/*','accept-language': 'en-US,en;q=0.9','content-type': 'application/x-www-form-urlencoded','cookie': '_ga=GA1.1.22434835.1709110974; __gads=ID=84df532ef6f9f9aa:T=1709110975:RT=1709278664:S=ALNI_MYrGplVjocOYCBarOSPP4dRXP-u0g; __gpi=UID=00000d1bf2425851:T=1709110975:RT=1709278664:S=ALNI_MZssPqM4cfJm5redhQLS-AHHQuEVA; __eoi=ID=1d52f87eb5ae5b25:T=1709110975:RT=1709278664:S=AA-Afjbi3-sm4wrMVQe79V4xxLqs; FCNEC=%5B%5B%22AKsRol-kl-4UfiwlNkLpoBKwEDyhOfZ6vsk5KLw3A3-FgNTeP_-c9Jf-lFJChtr1RPoGChwUBTtro4BFq89luWqqTdsuxI3cR2yngvEuUKa9ExQI2qtYoyJZEO1wxZfVV66kxFAX1fBkgVIHwXALp8z91LWR6-mOuw%3D%3D%22%5D%2Cnull%2C%5B%5B2%2C%22%5Bnull%2C%5Bnull%2C3%2C%5B1709278665%2C664080000%5D%5D%5D%22%5D%5D%5D; _ga_H0XGBVF70F=GS1.1.1709278663.4.1.1709278893.55.0.2041171874','origin': 'https://ttsmp3.com','referer': 'https://ttsmp3.com/ai','sec-ch-ua': '\"Chromium\";v=\"122\", \"Not(A:Brand\";v=\"24\", \"Google Chrome\";v=\"122\"','sec-ch-ua-mobile': '?0','sec-ch-ua-platform': '\"Windows\"','sec-fetch-dest': 'empty','sec-fetch-mode': 'cors','sec-fetch-site': 'same-origin','user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36'}\nSample = {'Error': 0, 'Speaker': 'onyx', 'Cached': 1, 'Text': 'Hi', 'tasktype': 'direct', 'URL': 'https://ttsmp3.com/created_mp3_ai/5bff6c1ea54bc6ded04166231e218c6f.mp3', 'MP3': '5bff6c1ea54bc6ded04166231e218c6f.mp3', 'UsedChars': 0}\ndef PlayURL(URL: str):\n  x = get(URL).content\n  name = f'.\\\\Music\\music{int(time.time())}.mp3'\n  with open(name,'wb') as file:\n    file.write(x)\n  mixer.music.load(name)\n  mixer.music.play()",
+        "peekOfCode": "url = \"https://ttsmp3.com/makemp3_ai.php\"\nheaders = {\n  'authority': 'ttsmp3.com',\n  'accept': '*/*',\n  'accept-language': 'en-US,en;q=0.9',\n  'content-type': 'application/x-www-form-urlencoded',\n  'origin': 'https://ttsmp3.com',\n  'referer': 'https://ttsmp3.com/ai',\n  'sec-fetch-mode': 'cors',\n  'sec-fetch-site': 'same-origin'",
         "detail": "Tests.1_Speak",
         "documentation": {}
     },
@@ -449,16 +467,7 @@
         "kind": 5,
         "importPath": "Tests.1_Speak",
         "description": "Tests.1_Speak",
-        "peekOfCode": "headers = {'authority': 'ttsmp3.com','accept': '*/*','accept-language': 'en-US,en;q=0.9','content-type': 'application/x-www-form-urlencoded','cookie': '_ga=GA1.1.22434835.1709110974; __gads=ID=84df532ef6f9f9aa:T=1709110975:RT=1709278664:S=ALNI_MYrGplVjocOYCBarOSPP4dRXP-u0g; __gpi=UID=00000d1bf2425851:T=1709110975:RT=1709278664:S=ALNI_MZssPqM4cfJm5redhQLS-AHHQuEVA; __eoi=ID=1d52f87eb5ae5b25:T=1709110975:RT=1709278664:S=AA-Afjbi3-sm4wrMVQe79V4xxLqs; FCNEC=%5B%5B%22AKsRol-kl-4UfiwlNkLpoBKwEDyhOfZ6vsk5KLw3A3-FgNTeP_-c9Jf-lFJChtr1RPoGChwUBTtro4BFq89luWqqTdsuxI3cR2yngvEuUKa9ExQI2qtYoyJZEO1wxZfVV66kxFAX1fBkgVIHwXALp8z91LWR6-mOuw%3D%3D%22%5D%2Cnull%2C%5B%5B2%2C%22%5Bnull%2C%5Bnull%2C3%2C%5B1709278665%2C664080000%5D%5D%5D%22%5D%5D%5D; _ga_H0XGBVF70F=GS1.1.1709278663.4.1.1709278893.55.0.2041171874','origin': 'https://ttsmp3.com','referer': 'https://ttsmp3.com/ai','sec-ch-ua': '\"Chromium\";v=\"122\", \"Not(A:Brand\";v=\"24\", \"Google Chrome\";v=\"122\"','sec-ch-ua-mobile': '?0','sec-ch-ua-platform': '\"Windows\"','sec-fetch-dest': 'empty','sec-fetch-mode': 'cors','sec-fetch-site': 'same-origin','user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36'}\nSample = {'Error': 0, 'Speaker': 'onyx', 'Cached': 1, 'Text': 'Hi', 'tasktype': 'direct', 'URL': 'https://ttsmp3.com/created_mp3_ai/5bff6c1ea54bc6ded04166231e218c6f.mp3', 'MP3': '5bff6c1ea54bc6ded04166231e218c6f.mp3', 'UsedChars': 0}\ndef PlayURL(URL: str):\n  x = get(URL).content\n  name = f'.\\\\Music\\music{int(time.time())}.mp3'\n  with open(name,'wb') as file:\n    file.write(x)\n  mixer.music.load(name)\n  mixer.music.play()\nasync def Speak(*args, Model: str = \"echo\", Speed: float = 0.80):",
-        "detail": "Tests.1_Speak",
-        "documentation": {}
-    },
-    {
-        "label": "Sample",
-        "kind": 5,
-        "importPath": "Tests.1_Speak",
-        "description": "Tests.1_Speak",
-        "peekOfCode": "Sample = {'Error': 0, 'Speaker': 'onyx', 'Cached': 1, 'Text': 'Hi', 'tasktype': 'direct', 'URL': 'https://ttsmp3.com/created_mp3_ai/5bff6c1ea54bc6ded04166231e218c6f.mp3', 'MP3': '5bff6c1ea54bc6ded04166231e218c6f.mp3', 'UsedChars': 0}\ndef PlayURL(URL: str):\n  x = get(URL).content\n  name = f'.\\\\Music\\music{int(time.time())}.mp3'\n  with open(name,'wb') as file:\n    file.write(x)\n  mixer.music.load(name)\n  mixer.music.play()\nasync def Speak(*args, Model: str = \"echo\", Speed: float = 0.80):\n  message = \" \".join(args)",
+        "peekOfCode": "headers = {\n  'authority': 'ttsmp3.com',\n  'accept': '*/*',\n  'accept-language': 'en-US,en;q=0.9',\n  'content-type': 'application/x-www-form-urlencoded',\n  'origin': 'https://ttsmp3.com',\n  'referer': 'https://ttsmp3.com/ai',\n  'sec-fetch-mode': 'cors',\n  'sec-fetch-site': 'same-origin'\n}",
         "detail": "Tests.1_Speak",
         "documentation": {}
     },

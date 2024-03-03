@@ -1,3 +1,5 @@
 # Try pi.ai for speak function
 # Add Siri Wave Animation for listening
 # Fix 1_Speak.py issue of "Music" folder
+# Make The Speak Function Stopable
+# Delete all files in Audio before starting the main executable
