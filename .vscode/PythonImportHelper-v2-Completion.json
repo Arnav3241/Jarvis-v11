@@ -440,7 +440,7 @@
         "kind": 2,
         "importPath": "Tests.1_Speak",
         "description": "Tests.1_Speak",
-        "peekOfCode": "def removeFilesfromFolder(folder:str):\n  for filename in os.listdir(folder):\n    file_path = os.path.join(folder, filename)\n    try:\n      if os.path.isfile(file_path) or os.path.islink(file_path):\n        os.unlink(file_path)\n      elif os.path.isdir(file_path):\n        shutil.rmtree(file_path)\n    except Exception as e:\n      print('Failed to delete %s. Reason: %s' % (file_path, e))",
+        "peekOfCode": "def removeFilesfromFolder(folder:str):\n  for filename in os.listdir(folder):\n    if filename == \"music.mp3\": return\n    file_path = os.path.join(folder, filename)\n    try:\n      if os.path.isfile(file_path) or os.path.islink(file_path):\n        os.unlink(file_path)\n      elif os.path.isdir(file_path):\n        shutil.rmtree(file_path)\n    except Exception as e:",
         "detail": "Tests.1_Speak",
         "documentation": {}
     },

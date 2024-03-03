@@ -27,6 +27,7 @@ headers = {
 # For removing all the audio files from the Audio folder so that it doesn't become too large
 def removeFilesfromFolder(folder:str):
   for filename in os.listdir(folder):
+    if filename == "music.mp3": return
     file_path = os.path.join(folder, filename)
     try:
       if os.path.isfile(file_path) or os.path.islink(file_path):

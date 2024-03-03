@@ -2,4 +2,5 @@ venv
 env.py
 
 Audio/*
+!Audio/music.mp3 
 
