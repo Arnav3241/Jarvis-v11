@@ -3,3 +3,4 @@
 # Fix 1_Speak.py issue of "Music" folder
 # Make The Speak Function Stopable
 # Delete all files in Audio before starting the main executable
+# Convert listen code to eel instead of seleniam as selenium is slow 

@@ -1,18 +1,26 @@
 [
     {
-        "label": "webdriver",
-        "importPath": "selenium",
-        "description": "selenium",
+        "label": "ChromeDriverManager",
+        "importPath": "webdriver_manager.chrome",
+        "description": "webdriver_manager.chrome",
         "isExtraImport": true,
-        "detail": "selenium",
+        "detail": "webdriver_manager.chrome",
         "documentation": {}
     },
     {
-        "label": "webdriver",
-        "importPath": "selenium",
-        "description": "selenium",
+        "label": "Service",
+        "importPath": "selenium.webdriver.chrome.service",
+        "description": "selenium.webdriver.chrome.service",
         "isExtraImport": true,
-        "detail": "selenium",
+        "detail": "selenium.webdriver.chrome.service",
+        "documentation": {}
+    },
+    {
+        "label": "Service",
+        "importPath": "selenium.webdriver.chrome.service",
+        "description": "selenium.webdriver.chrome.service",
+        "isExtraImport": true,
+        "detail": "selenium.webdriver.chrome.service",
         "documentation": {}
     },
     {
@@ -32,19 +40,19 @@
         "documentation": {}
     },
     {
-        "label": "Service",
-        "importPath": "selenium.webdriver.chrome.service",
-        "description": "selenium.webdriver.chrome.service",
+        "label": "webdriver",
+        "importPath": "selenium",
+        "description": "selenium",
         "isExtraImport": true,
-        "detail": "selenium.webdriver.chrome.service",
+        "detail": "selenium",
         "documentation": {}
     },
     {
-        "label": "Service",
-        "importPath": "selenium.webdriver.chrome.service",
-        "description": "selenium.webdriver.chrome.service",
+        "label": "webdriver",
+        "importPath": "selenium",
+        "description": "selenium",
         "isExtraImport": true,
-        "detail": "selenium.webdriver.chrome.service",
+        "detail": "selenium",
         "documentation": {}
     },
     {
@@ -70,31 +78,6 @@
         "description": "os",
         "isExtraImport": true,
         "detail": "os",
-        "documentation": {}
-    },
-    {
-        "label": "ChromeDriverManager",
-        "importPath": "webdriver_manager.chrome",
-        "description": "webdriver_manager.chrome",
-        "isExtraImport": true,
-        "detail": "webdriver_manager.chrome",
-        "documentation": {}
-    },
-    {
-        "label": "ChromeDriverManager",
-        "importPath": "webdriver_manager.chrome",
-        "description": "webdriver_manager.chrome",
-        "isExtraImport": true,
-        "detail": "webdriver_manager.chrome",
-        "documentation": {}
-    },
-    {
-        "label": "time",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "time",
-        "description": "time",
-        "detail": "time",
         "documentation": {}
     },
     {
@@ -173,6 +156,15 @@
         "importPath": "eel",
         "description": "eel",
         "detail": "eel",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
         "documentation": {}
     },
     {
@@ -314,89 +306,53 @@
         "kind": 2,
         "importPath": "Functions.Listen.listen",
         "description": "Functions.Listen.listen",
-        "peekOfCode": "def Listen():\n    # Printing a message to indicate that the program is listening\n    print( \"LISTENING ... \")\n    # Opening the website in the Chrome browser\n    driver.get(website)\n    # Clicking the 'start' button on the website to initiate voice recognition\n    driver.find_element(by=By.ID, value='start').click()\n    # Running an infinite loop to continuously listen for voice input\n    while True:\n        # Recording the start time to calculate the time taken for voice recognition",
-        "detail": "Functions.Listen.listen",
-        "documentation": {}
-    },
-    {
-        "label": "chrome_options",
-        "kind": 5,
-        "importPath": "Functions.Listen.listen",
-        "description": "Functions.Listen.listen",
-        "peekOfCode": "chrome_options = webdriver.ChromeOptions()  # Creating ChromeOptions to customize the behavior of the Chrome browser\nchrome_options.add_argument(\"--use-fake-ui-for-media-stream\")  # Adding an argument to simulate a fake UI for media stream\nchrome_options.add_argument(\"--headless=new\")  # Adding an argument to run Chrome in headless mode with a new session\n# Setting up the Chrome driver with specified service and options\ndriver = webdriver.Chrome(service=Service(executable_path=r\"CHROMEDRVIER\\chromedriver.exe\"), options=chrome_options)\n# Creating the URL for the website using the current working directory\nwebsite = f\"{getcwd()}\\\\VOICE_RECOGNITION\\\\voice.html\"\n# Opening the website in the Chrome browser\ndriver.get(website)\n# Defining a function named Listen",
-        "detail": "Functions.Listen.listen",
-        "documentation": {}
-    },
-    {
-        "label": "driver",
-        "kind": 5,
-        "importPath": "Functions.Listen.listen",
-        "description": "Functions.Listen.listen",
-        "peekOfCode": "driver = webdriver.Chrome(service=Service(executable_path=r\"CHROMEDRVIER\\chromedriver.exe\"), options=chrome_options)\n# Creating the URL for the website using the current working directory\nwebsite = f\"{getcwd()}\\\\VOICE_RECOGNITION\\\\voice.html\"\n# Opening the website in the Chrome browser\ndriver.get(website)\n# Defining a function named Listen\ndef Listen():\n    # Printing a message to indicate that the program is listening\n    print( \"LISTENING ... \")\n    # Opening the website in the Chrome browser",
-        "detail": "Functions.Listen.listen",
-        "documentation": {}
-    },
-    {
-        "label": "website",
-        "kind": 5,
-        "importPath": "Functions.Listen.listen",
-        "description": "Functions.Listen.listen",
-        "peekOfCode": "website = f\"{getcwd()}\\\\VOICE_RECOGNITION\\\\voice.html\"\n# Opening the website in the Chrome browser\ndriver.get(website)\n# Defining a function named Listen\ndef Listen():\n    # Printing a message to indicate that the program is listening\n    print( \"LISTENING ... \")\n    # Opening the website in the Chrome browser\n    driver.get(website)\n    # Clicking the 'start' button on the website to initiate voice recognition",
-        "detail": "Functions.Listen.listen",
-        "documentation": {}
-    },
-    {
-        "label": "Listen",
-        "kind": 2,
-        "importPath": "Functions.Listen2.Listen",
-        "description": "Functions.Listen2.Listen",
         "peekOfCode": "def Listen():\n  driver.get(website)\n  driver.find_element(by=By.ID, value='start').click()\n  print(\"Listening ...\")\n  while True:\n    text = driver.find_element(by=By.ID, value='output').text\n    if text != \"\":\n      print(f\"You : {text}\")\n      driver.find_element(by=By.ID, value='end').click()\n      return text",
-        "detail": "Functions.Listen2.Listen",
+        "detail": "Functions.Listen.listen",
         "documentation": {}
     },
     {
         "label": "os.environ['WDM_LOG']",
         "kind": 5,
-        "importPath": "Functions.Listen2.Listen",
-        "description": "Functions.Listen2.Listen",
+        "importPath": "Functions.Listen.listen",
+        "description": "Functions.Listen.listen",
         "peekOfCode": "os.environ['WDM_LOG'] = '0'\nservice = Service(ChromeDriverManager().install())\nchrome_options = webdriver.ChromeOptions()\nchrome_options.add_argument(\"--use-fake-ui-for-media-stream\")\nchrome_options.add_argument(\"--headless=new\")\ndriver = webdriver.Chrome(service=service, options=chrome_options)\nwebsite = f\"{getcwd()}//Functions//Listen2//Recognition//index.html\"\ndriver.get(website)\ndef Listen():\n  driver.get(website)",
-        "detail": "Functions.Listen2.Listen",
+        "detail": "Functions.Listen.listen",
         "documentation": {}
     },
     {
         "label": "service",
         "kind": 5,
-        "importPath": "Functions.Listen2.Listen",
-        "description": "Functions.Listen2.Listen",
+        "importPath": "Functions.Listen.listen",
+        "description": "Functions.Listen.listen",
         "peekOfCode": "service = Service(ChromeDriverManager().install())\nchrome_options = webdriver.ChromeOptions()\nchrome_options.add_argument(\"--use-fake-ui-for-media-stream\")\nchrome_options.add_argument(\"--headless=new\")\ndriver = webdriver.Chrome(service=service, options=chrome_options)\nwebsite = f\"{getcwd()}//Functions//Listen2//Recognition//index.html\"\ndriver.get(website)\ndef Listen():\n  driver.get(website)\n  driver.find_element(by=By.ID, value='start').click()",
-        "detail": "Functions.Listen2.Listen",
+        "detail": "Functions.Listen.listen",
         "documentation": {}
     },
     {
         "label": "chrome_options",
         "kind": 5,
-        "importPath": "Functions.Listen2.Listen",
-        "description": "Functions.Listen2.Listen",
+        "importPath": "Functions.Listen.listen",
+        "description": "Functions.Listen.listen",
         "peekOfCode": "chrome_options = webdriver.ChromeOptions()\nchrome_options.add_argument(\"--use-fake-ui-for-media-stream\")\nchrome_options.add_argument(\"--headless=new\")\ndriver = webdriver.Chrome(service=service, options=chrome_options)\nwebsite = f\"{getcwd()}//Functions//Listen2//Recognition//index.html\"\ndriver.get(website)\ndef Listen():\n  driver.get(website)\n  driver.find_element(by=By.ID, value='start').click()\n  print(\"Listening ...\")",
-        "detail": "Functions.Listen2.Listen",
+        "detail": "Functions.Listen.listen",
         "documentation": {}
     },
     {
         "label": "driver",
         "kind": 5,
-        "importPath": "Functions.Listen2.Listen",
-        "description": "Functions.Listen2.Listen",
+        "importPath": "Functions.Listen.listen",
+        "description": "Functions.Listen.listen",
         "peekOfCode": "driver = webdriver.Chrome(service=service, options=chrome_options)\nwebsite = f\"{getcwd()}//Functions//Listen2//Recognition//index.html\"\ndriver.get(website)\ndef Listen():\n  driver.get(website)\n  driver.find_element(by=By.ID, value='start').click()\n  print(\"Listening ...\")\n  while True:\n    text = driver.find_element(by=By.ID, value='output').text\n    if text != \"\":",
-        "detail": "Functions.Listen2.Listen",
+        "detail": "Functions.Listen.listen",
         "documentation": {}
     },
     {
         "label": "website",
         "kind": 5,
-        "importPath": "Functions.Listen2.Listen",
-        "description": "Functions.Listen2.Listen",
+        "importPath": "Functions.Listen.listen",
+        "description": "Functions.Listen.listen",
         "peekOfCode": "website = f\"{getcwd()}//Functions//Listen2//Recognition//index.html\"\ndriver.get(website)\ndef Listen():\n  driver.get(website)\n  driver.find_element(by=By.ID, value='start').click()\n  print(\"Listening ...\")\n  while True:\n    text = driver.find_element(by=By.ID, value='output').text\n    if text != \"\":\n      print(f\"You : {text}\")",
-        "detail": "Functions.Listen2.Listen",
+        "detail": "Functions.Listen.listen",
         "documentation": {}
     },
     {
@@ -424,6 +380,51 @@
         "description": "Interface.IF",
         "peekOfCode": "def Initialise():\n  keyboard.press_and_release(\"win+up\")\n  print(\"Connected 🚀🚀🚀\")",
         "detail": "Interface.IF",
+        "documentation": {}
+    },
+    {
+        "label": "Listen",
+        "kind": 2,
+        "importPath": "Tests.Listen.listen",
+        "description": "Tests.Listen.listen",
+        "peekOfCode": "def Listen():\n    # Printing a message to indicate that the program is listening\n    print( \"LISTENING ... \")\n    # Opening the website in the Chrome browser\n    driver.get(website)\n    # Clicking the 'start' button on the website to initiate voice recognition\n    driver.find_element(by=By.ID, value='start').click()\n    # Running an infinite loop to continuously listen for voice input\n    while True:\n        # Recording the start time to calculate the time taken for voice recognition",
+        "detail": "Tests.Listen.listen",
+        "documentation": {}
+    },
+    {
+        "label": "chrome_options",
+        "kind": 5,
+        "importPath": "Tests.Listen.listen",
+        "description": "Tests.Listen.listen",
+        "peekOfCode": "chrome_options = webdriver.ChromeOptions()  # Creating ChromeOptions to customize the behavior of the Chrome browser\nchrome_options.add_argument(\"--use-fake-ui-for-media-stream\")  # Adding an argument to simulate a fake UI for media stream\nchrome_options.add_argument(\"--headless=new\")  # Adding an argument to run Chrome in headless mode with a new session\nservice = Service(executable_path=\".\\\\CHROMEDRIVER\\\\chromedriver.exe\")\n# Setting up the Chrome driver with specified service and options\ndriver = webdriver.Chrome(service=service, options=chrome_options)\n# Creating the URL for the website using the current working directory\nwebsite = f\"{getcwd()}\\\\Functions\\\\Listen\\\\index.html\"\n# Opening the website in the Chrome browser\ndriver.get(website)",
+        "detail": "Tests.Listen.listen",
+        "documentation": {}
+    },
+    {
+        "label": "service",
+        "kind": 5,
+        "importPath": "Tests.Listen.listen",
+        "description": "Tests.Listen.listen",
+        "peekOfCode": "service = Service(executable_path=\".\\\\CHROMEDRIVER\\\\chromedriver.exe\")\n# Setting up the Chrome driver with specified service and options\ndriver = webdriver.Chrome(service=service, options=chrome_options)\n# Creating the URL for the website using the current working directory\nwebsite = f\"{getcwd()}\\\\Functions\\\\Listen\\\\index.html\"\n# Opening the website in the Chrome browser\ndriver.get(website)\n# Defining a function named Listen\ndef Listen():\n    # Printing a message to indicate that the program is listening",
+        "detail": "Tests.Listen.listen",
+        "documentation": {}
+    },
+    {
+        "label": "driver",
+        "kind": 5,
+        "importPath": "Tests.Listen.listen",
+        "description": "Tests.Listen.listen",
+        "peekOfCode": "driver = webdriver.Chrome(service=service, options=chrome_options)\n# Creating the URL for the website using the current working directory\nwebsite = f\"{getcwd()}\\\\Functions\\\\Listen\\\\index.html\"\n# Opening the website in the Chrome browser\ndriver.get(website)\n# Defining a function named Listen\ndef Listen():\n    # Printing a message to indicate that the program is listening\n    print( \"LISTENING ... \")\n    # Opening the website in the Chrome browser",
+        "detail": "Tests.Listen.listen",
+        "documentation": {}
+    },
+    {
+        "label": "website",
+        "kind": 5,
+        "importPath": "Tests.Listen.listen",
+        "description": "Tests.Listen.listen",
+        "peekOfCode": "website = f\"{getcwd()}\\\\Functions\\\\Listen\\\\index.html\"\n# Opening the website in the Chrome browser\ndriver.get(website)\n# Defining a function named Listen\ndef Listen():\n    # Printing a message to indicate that the program is listening\n    print( \"LISTENING ... \")\n    # Opening the website in the Chrome browser\n    driver.get(website)\n    # Clicking the 'start' button on the website to initiate voice recognition",
+        "detail": "Tests.Listen.listen",
         "documentation": {}
     },
     {
