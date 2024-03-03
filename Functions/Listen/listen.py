@@ -4,7 +4,6 @@ from selenium.webdriver.common.by import By  # Importing the 'By' class for loca
 from selenium.webdriver.chrome.service import Service  # Importing the 'Service' class for ChromeDriver
 # from webdriver_manager.chrome import ChromeDriverManager  # Importing ChromeDriverManager for automatic installation
 from os import getcwd  # Importing getcwd to get the current working directory
-from webdriver_manager.chrome import ChromeDriverManager
 import time  # Importing time for adding delays in the script
 
 
@@ -15,11 +14,13 @@ chrome_options = webdriver.ChromeOptions()  # Creating ChromeOptions to customiz
 chrome_options.add_argument("--use-fake-ui-for-media-stream")  # Adding an argument to simulate a fake UI for media stream
 chrome_options.add_argument("--headless=new")  # Adding an argument to run Chrome in headless mode with a new session
 
+service = Service(executable_path=".\\CHROMEDRIVER\\chromedriver.exe")
+
 # Setting up the Chrome driver with specified service and options
-driver = webdriver.Chrome(service=Service(executable_path=r"CHROMEDRVIER\chromedriver.exe"), options=chrome_options)
+driver = webdriver.Chrome(service=service, options=chrome_options)
 
 # Creating the URL for the website using the current working directory
-website = f"{getcwd()}\\VOICE_RECOGNITION\\voice.html"
+website = f"{getcwd()}\\Functions\\Listen\\index.html"
 
 # Opening the website in the Chrome browser
 driver.get(website)
@@ -60,6 +61,7 @@ def Listen():
 
 # Main block of code
 if __name__=="__main__":
+    time.sleep(2) # To load the DOM Elements
     # Running the Listen function in an infinite loop
     while True:
         Listen()
