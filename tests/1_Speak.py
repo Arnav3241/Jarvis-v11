@@ -61,7 +61,9 @@ async def Speak(*args, Model: str = "echo", Speed: float = 0.95):
   print(f"Time taken: {time.time() - ts} seconds")
 
 if __name__ == "__main__":
-  asyncio.run(Speak("Video games are meant to immerse the player into a sort of virtual reality. We do this mainly visually, but it can make a massive difference and be a massive improvement to your game if you add sounds as well."))
+  asyncio.run(Speak("""
+Who am I? I am wearing a green shirt.
+"""))
   time.sleep(20)
   # asyncio.run(Speak("Hello world"))
   # time.sleep(1)
