@@ -1680,7 +1680,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def Jarvis():\n  time.sleep(2)\n  eel.showMainWindow()\n  time.sleep(2)\n  eel.showWakeWindow()\n  time.sleep(2)\n  eel.showMainWindow()\n  time.sleep(2)\n  eel.showWakeWindow()\n  time.sleep(2)",
+        "peekOfCode": "def Jarvis():\n  time.sleep(2)\n  eel.showMainWindow()\n  time.sleep(2)\n  eel.showWakeWindow()\n  time.sleep(2)\n  eel.showMainWindow()\n#? Main Execution\nif __name__ == '__main__': \n  try: eel.start(\"index.html\", mode='chrome', size=(1500, 1200)) ",
         "detail": "main",
         "documentation": {}
     }

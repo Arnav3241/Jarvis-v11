@@ -25,10 +25,6 @@ def Jarvis():
   eel.showWakeWindow()
   time.sleep(2)
   eel.showMainWindow()
-  time.sleep(2)
-  eel.showWakeWindow()
-  time.sleep(2)
-  eel.showMainWindow()
   
 
 #? Main Execution
