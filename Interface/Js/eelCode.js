@@ -3,24 +3,29 @@ const Startup = () => {
   eel.Initialise();
 }
 
-const showNotification = (title, message) => {}
+function cslPrint(data) {
+  console.log(data);
+}
 
-const showImageInChat = (image) => {}
-
-const ChangeStatus = (status) => {}
-
-const ChangeVolume = (volume) => {}
-
-const disableInput = (toDisable) => {}
-
-const ChatWithFile = (file) => {}
-
-const TempEmail = () => {}
-
-const CodeSupport = (userInput) => {}
-
-const HomeAutomation = (serial, toTurnOn) => {}
-
-
+eel.expose(cslPrint);
 
 Startup();
+// const showNotification = (title, message) => {}
+
+// const showImageInChat = (image) => {}
+
+// const ChangeStatus = (status) => {}
+
+// const ChangeVolume = (volume) => {}
+
+// const disableInput = (toDisable) => {}
+
+// const ChatWithFile = (file) => {}
+
+// const TempEmail = () => {}
+
+// const CodeSupport = (userInput) => {}
+
+// const HomeAutomation = (serial, toTurnOn) => {}
+
+

@@ -8,6 +8,22 @@
         "documentation": {}
     },
     {
+        "label": "ChromeDriverManager",
+        "importPath": "webdriver_manager.chrome",
+        "description": "webdriver_manager.chrome",
+        "isExtraImport": true,
+        "detail": "webdriver_manager.chrome",
+        "documentation": {}
+    },
+    {
+        "label": "Service",
+        "importPath": "selenium.webdriver.chrome.service",
+        "description": "selenium.webdriver.chrome.service",
+        "isExtraImport": true,
+        "detail": "selenium.webdriver.chrome.service",
+        "documentation": {}
+    },
+    {
         "label": "Service",
         "importPath": "selenium.webdriver.chrome.service",
         "description": "selenium.webdriver.chrome.service",
@@ -37,6 +53,22 @@
         "description": "selenium.webdriver.common.by",
         "isExtraImport": true,
         "detail": "selenium.webdriver.common.by",
+        "documentation": {}
+    },
+    {
+        "label": "By",
+        "importPath": "selenium.webdriver.common.by",
+        "description": "selenium.webdriver.common.by",
+        "isExtraImport": true,
+        "detail": "selenium.webdriver.common.by",
+        "documentation": {}
+    },
+    {
+        "label": "webdriver",
+        "importPath": "selenium",
+        "description": "selenium",
+        "isExtraImport": true,
+        "detail": "selenium",
         "documentation": {}
     },
     {
@@ -87,14 +119,6 @@
         "importPath": "warnings",
         "description": "warnings",
         "detail": "warnings",
-        "documentation": {}
-    },
-    {
-        "label": "mixer",
-        "importPath": "pygame",
-        "description": "pygame",
-        "isExtraImport": true,
-        "detail": "pygame",
         "documentation": {}
     },
     {
@@ -369,16 +393,7 @@
         "kind": 2,
         "importPath": "Interface.IF",
         "description": "Interface.IF",
-        "peekOfCode": "def PrintPyLog(*args):\n  statement = \"\"\n  for i in args: statement += str(i) + \" \"\n  print(f\"#JS-Log: {statement}\")\n@eel.expose\ndef Initialise():\n  keyboard.press_and_release(\"win+up\")\n  print(\"Connected 🚀🚀🚀\")",
-        "detail": "Interface.IF",
-        "documentation": {}
-    },
-    {
-        "label": "Initialise",
-        "kind": 2,
-        "importPath": "Interface.IF",
-        "description": "Interface.IF",
-        "peekOfCode": "def Initialise():\n  keyboard.press_and_release(\"win+up\")\n  print(\"Connected 🚀🚀🚀\")",
+        "peekOfCode": "def PrintPyLog(*args):\n  statement = \"\"\n  for i in args: statement += str(i) + \" \"\n  print(f\"#JS-Log: {statement}\")",
         "detail": "Interface.IF",
         "documentation": {}
     },
@@ -470,6 +485,42 @@
         "description": "Tests.1_Speak",
         "peekOfCode": "headers = {\n  'authority': 'ttsmp3.com',\n  'accept': '*/*',\n  'accept-language': 'en-US,en;q=0.9',\n  'content-type': 'application/x-www-form-urlencoded',\n  'origin': 'https://ttsmp3.com',\n  'referer': 'https://ttsmp3.com/ai',\n  'sec-fetch-mode': 'cors',\n  'sec-fetch-site': 'same-origin'\n}",
         "detail": "Tests.1_Speak",
+        "documentation": {}
+    },
+    {
+        "label": "service",
+        "kind": 5,
+        "importPath": "Tests.2_Speak",
+        "description": "Tests.2_Speak",
+        "peekOfCode": "service = Service(ChromeDriverManager().install())\ndriver = webdriver.Chrome(service=service)\nwebsite = \"https://pi.ai/talk\"\ntext = \"To calculate the probability of winning more than one giveaway, we can use the binomial probability formula.\"\ndriver.get(website)\ntime.sleep(3)\ndriver.find_element(by=By.XPATH, value=\"//*[@id=\\\"__next\\\"]/main/div/div/button\").click()\ntime.sleep(3)\ndriver.find_element(by=By.XPATH, value=\"//*[@id=\\\"__next\\\"]/main/div/div/button\").click()\ntime.sleep(3)",
+        "detail": "Tests.2_Speak",
+        "documentation": {}
+    },
+    {
+        "label": "driver",
+        "kind": 5,
+        "importPath": "Tests.2_Speak",
+        "description": "Tests.2_Speak",
+        "peekOfCode": "driver = webdriver.Chrome(service=service)\nwebsite = \"https://pi.ai/talk\"\ntext = \"To calculate the probability of winning more than one giveaway, we can use the binomial probability formula.\"\ndriver.get(website)\ntime.sleep(3)\ndriver.find_element(by=By.XPATH, value=\"//*[@id=\\\"__next\\\"]/main/div/div/button\").click()\ntime.sleep(3)\ndriver.find_element(by=By.XPATH, value=\"//*[@id=\\\"__next\\\"]/main/div/div/button\").click()\ntime.sleep(3)\ndriver.find_element(by=By.XPATH, value=\"//*[@id=\\\"__next\\\"]/main/div/div/div[1]/div[1]/div[2]/button[2]\").click()",
+        "detail": "Tests.2_Speak",
+        "documentation": {}
+    },
+    {
+        "label": "website",
+        "kind": 5,
+        "importPath": "Tests.2_Speak",
+        "description": "Tests.2_Speak",
+        "peekOfCode": "website = \"https://pi.ai/talk\"\ntext = \"To calculate the probability of winning more than one giveaway, we can use the binomial probability formula.\"\ndriver.get(website)\ntime.sleep(3)\ndriver.find_element(by=By.XPATH, value=\"//*[@id=\\\"__next\\\"]/main/div/div/button\").click()\ntime.sleep(3)\ndriver.find_element(by=By.XPATH, value=\"//*[@id=\\\"__next\\\"]/main/div/div/button\").click()\ntime.sleep(3)\ndriver.find_element(by=By.XPATH, value=\"//*[@id=\\\"__next\\\"]/main/div/div/div[1]/div[1]/div[2]/button[2]\").click()\ntime.sleep(3)",
+        "detail": "Tests.2_Speak",
+        "documentation": {}
+    },
+    {
+        "label": "text",
+        "kind": 5,
+        "importPath": "Tests.2_Speak",
+        "description": "Tests.2_Speak",
+        "peekOfCode": "text = \"To calculate the probability of winning more than one giveaway, we can use the binomial probability formula.\"\ndriver.get(website)\ntime.sleep(3)\ndriver.find_element(by=By.XPATH, value=\"//*[@id=\\\"__next\\\"]/main/div/div/button\").click()\ntime.sleep(3)\ndriver.find_element(by=By.XPATH, value=\"//*[@id=\\\"__next\\\"]/main/div/div/button\").click()\ntime.sleep(3)\ndriver.find_element(by=By.XPATH, value=\"//*[@id=\\\"__next\\\"]/main/div/div/div[1]/div[1]/div[2]/button[2]\").click()\ntime.sleep(3)\ndriver.find_element(by=By.XPATH, value=\"//*[@id=\\\"__next\\\"]/main/div/div/div/div/div/div[1]/div/div[1]/button[2]\").click()",
+        "detail": "Tests.2_Speak",
         "documentation": {}
     },
     {
@@ -1616,11 +1667,20 @@
         "documentation": {}
     },
     {
+        "label": "Initialise",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def Initialise():\n  keyboard.press_and_release(\"win+up\")\n  print(\"Connected 🚀🚀🚀\")\n  Jarvis()\n#? Main function\n# @eel.expose\ndef Jarvis():\n  time.sleep(2)\n  eel.showMainWindow()\n  time.sleep(2)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
         "label": "Jarvis",
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def Jarvis():\n  ...\n#? Main Execution\nif __name__ == '__main__': \n  try: eel.start(\"index.html\") \n  except: print(\"Jarvis has encountered a fatel error. Please try later.\"), exit()",
+        "peekOfCode": "def Jarvis():\n  time.sleep(2)\n  eel.showMainWindow()\n  time.sleep(2)\n  eel.showWakeWindow()\n  time.sleep(2)\n  eel.showMainWindow()\n  time.sleep(2)\n  eel.showWakeWindow()\n  time.sleep(2)",
         "detail": "main",
         "documentation": {}
     }

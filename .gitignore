@@ -1,5 +1,5 @@
 venv
-env.py
+env.local.json
 
 Audio/*
 !Audio/music.mp3 
