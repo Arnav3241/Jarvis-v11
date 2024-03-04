@@ -245,6 +245,14 @@
         "documentation": {}
     },
     {
+        "label": "playsound",
+        "importPath": "playsound",
+        "description": "playsound",
+        "isExtraImport": true,
+        "detail": "playsound",
+        "documentation": {}
+    },
+    {
         "label": "with_statement",
         "importPath": "__future__",
         "description": "__future__",
@@ -521,6 +529,24 @@
         "description": "Tests.2_Speak",
         "peekOfCode": "text = \"To calculate the probability of winning more than one giveaway, we can use the binomial probability formula.\"\ndriver.get(website)\ntime.sleep(3)\ndriver.find_element(by=By.XPATH, value=\"//*[@id=\\\"__next\\\"]/main/div/div/button\").click()\ntime.sleep(3)\ndriver.find_element(by=By.XPATH, value=\"//*[@id=\\\"__next\\\"]/main/div/div/button\").click()\ntime.sleep(3)\ndriver.find_element(by=By.XPATH, value=\"//*[@id=\\\"__next\\\"]/main/div/div/div[1]/div[1]/div[2]/button[2]\").click()\ntime.sleep(3)\ndriver.find_element(by=By.XPATH, value=\"//*[@id=\\\"__next\\\"]/main/div/div/div/div/div/div[1]/div/div[1]/button[2]\").click()",
         "detail": "Tests.2_Speak",
+        "documentation": {}
+    },
+    {
+        "label": "play_mp3",
+        "kind": 2,
+        "importPath": "Tests.playsoundT",
+        "description": "Tests.playsoundT",
+        "peekOfCode": "def play_mp3(file_path):\n    playsound(file_path)\n# Example usage\nmp3_file = \"/path/to/your/file.mp3\"\nplay_mp3(mp3_file)",
+        "detail": "Tests.playsoundT",
+        "documentation": {}
+    },
+    {
+        "label": "mp3_file",
+        "kind": 5,
+        "importPath": "Tests.playsoundT",
+        "description": "Tests.playsoundT",
+        "peekOfCode": "mp3_file = \"/path/to/your/file.mp3\"\nplay_mp3(mp3_file)",
+        "detail": "Tests.playsoundT",
         "documentation": {}
     },
     {
