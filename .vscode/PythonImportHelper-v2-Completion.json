@@ -310,6 +310,39 @@
         "documentation": {}
     },
     {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "Functions.Listen.listen",
+        "description": "Functions.Listen.listen",
+        "isExtraImport": true,
+        "detail": "Functions.Listen.listen",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "Interface.IF",
+        "description": "Interface.IF",
+        "isExtraImport": true,
+        "detail": "Interface.IF",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "Interface.IF",
+        "description": "Interface.IF",
+        "isExtraImport": true,
+        "detail": "Interface.IF",
+        "documentation": {}
+    },
+    {
         "label": "with_statement",
         "importPath": "__future__",
         "description": "__future__",
@@ -380,30 +413,6 @@
         "description": "unicodedata",
         "isExtraImport": true,
         "detail": "unicodedata",
-        "documentation": {}
-    },
-    {
-        "label": "*",
-        "importPath": "Functions.Listen.listen",
-        "description": "Functions.Listen.listen",
-        "isExtraImport": true,
-        "detail": "Functions.Listen.listen",
-        "documentation": {}
-    },
-    {
-        "label": "*",
-        "importPath": "Interface.IF",
-        "description": "Interface.IF",
-        "isExtraImport": true,
-        "detail": "Interface.IF",
-        "documentation": {}
-    },
-    {
-        "label": "*",
-        "importPath": "Interface.IF",
-        "description": "Interface.IF",
-        "isExtraImport": true,
-        "detail": "Interface.IF",
         "documentation": {}
     },
     {
@@ -628,6 +637,105 @@
         "description": "Tests.3_Speak",
         "peekOfCode": "def speak(Text:str, GetTimeComplexity:bool=False, Voice:str=\"en-US-SteffanNeural\", Media:str=os.getcwd()):\n  \"A function that converts Text to Speech with Realestic Voices. Some Voices That you can select other than the default are: \"\n  st = time.time()\n  command = f'edge-tts --voice \"{Voice}\" --text \"{Text}\" --write-media \"{os.getcwd()}\\\\Audio\\\\{st}.mp3\"'\n  os.system(command)\n  et = time.time() - st\n  if GetTimeComplexity == True: print(f\"The time complexity of speak is {et} seconds\")\n  try: playsound.playsound(f\"{os.getcwd()}\\\\Audio\\\\{st}.mp3\")\n  except: print(\"Unsuccessful at playing Sound: Playsound error\")\nif __name__ == \"__main__\": ",
         "detail": "Tests.3_Speak",
+        "documentation": {}
+    },
+    {
+        "label": "split",
+        "kind": 2,
+        "importPath": "Tests.4_Speak",
+        "description": "Tests.4_Speak",
+        "peekOfCode": "def split(text: str) -> list[str]:\n    \"\"\"\n    Split the text into sentences.\n    If the text contains substrings \"<prd>\" or \"<stop>\", they would lead \n    to incorrect splitting because they are used as markers for splitting.\n    :param text: text to be split into sentences\n    :type text: str\n    :return: list of sentences\n    :rtype: list[str]\n    \"\"\"",
+        "detail": "Tests.4_Speak",
+        "documentation": {}
+    },
+    {
+        "label": "speak",
+        "kind": 2,
+        "importPath": "Tests.4_Speak",
+        "description": "Tests.4_Speak",
+        "peekOfCode": "def speak(Text:str, GetTimeComplexity:bool=False, Voice:str=\"en-US-SteffanNeural\", Media:str=os.getcwd()):\n  \"A function that converts Text to Speech with Realestic Voices. Some Voices That you can select other than the default are: \"\n  st = time.time()\n  command = f'edge-tts --voice \"{Voice}\" --text \"{Text}\" --write-media \"{os.getcwd()}\\\\Audio\\\\{st}.mp3\"'\n  os.system(command)\n  et = time.time() - st\n  if GetTimeComplexity == True: print(f\"The time complexity of speak is {et} seconds\")\n  try: playsound.playsound(f\"{os.getcwd()}\\\\Audio\\\\{st}.mp3\")\n  except: print(\"Unsuccessful at playing Sound: Playsound error\")\nif __name__ == \"__main__\": ",
+        "detail": "Tests.4_Speak",
+        "documentation": {}
+    },
+    {
+        "label": "prefixes",
+        "kind": 5,
+        "importPath": "Tests.4_Speak",
+        "description": "Tests.4_Speak",
+        "peekOfCode": "prefixes = \"(Mr|St|Mrs|Ms|Dr)[.]\"\nsuffixes = \"(Inc|Ltd|Jr|Sr|Co)\"\nstarters = \"(Mr|Mrs|Ms|Dr|Prof|Capt|Cpt|Lt|He\\s|She\\s|It\\s|They\\s|Their\\s|Our\\s|We\\s|But\\s|However\\s|That\\s|This\\s|Wherever)\"\nacronyms = \"([A-Z][.][A-Z][.](?:[A-Z][.])?)\"\nwebsites = \"[.](com|net|org|io|gov|edu|me)\"\ndigits = \"([0-9])\"\nmultiple_dots = r'\\.{2,}'\ndef split(text: str) -> list[str]:\n    \"\"\"\n    Split the text into sentences.",
+        "detail": "Tests.4_Speak",
+        "documentation": {}
+    },
+    {
+        "label": "suffixes",
+        "kind": 5,
+        "importPath": "Tests.4_Speak",
+        "description": "Tests.4_Speak",
+        "peekOfCode": "suffixes = \"(Inc|Ltd|Jr|Sr|Co)\"\nstarters = \"(Mr|Mrs|Ms|Dr|Prof|Capt|Cpt|Lt|He\\s|She\\s|It\\s|They\\s|Their\\s|Our\\s|We\\s|But\\s|However\\s|That\\s|This\\s|Wherever)\"\nacronyms = \"([A-Z][.][A-Z][.](?:[A-Z][.])?)\"\nwebsites = \"[.](com|net|org|io|gov|edu|me)\"\ndigits = \"([0-9])\"\nmultiple_dots = r'\\.{2,}'\ndef split(text: str) -> list[str]:\n    \"\"\"\n    Split the text into sentences.\n    If the text contains substrings \"<prd>\" or \"<stop>\", they would lead ",
+        "detail": "Tests.4_Speak",
+        "documentation": {}
+    },
+    {
+        "label": "starters",
+        "kind": 5,
+        "importPath": "Tests.4_Speak",
+        "description": "Tests.4_Speak",
+        "peekOfCode": "starters = \"(Mr|Mrs|Ms|Dr|Prof|Capt|Cpt|Lt|He\\s|She\\s|It\\s|They\\s|Their\\s|Our\\s|We\\s|But\\s|However\\s|That\\s|This\\s|Wherever)\"\nacronyms = \"([A-Z][.][A-Z][.](?:[A-Z][.])?)\"\nwebsites = \"[.](com|net|org|io|gov|edu|me)\"\ndigits = \"([0-9])\"\nmultiple_dots = r'\\.{2,}'\ndef split(text: str) -> list[str]:\n    \"\"\"\n    Split the text into sentences.\n    If the text contains substrings \"<prd>\" or \"<stop>\", they would lead \n    to incorrect splitting because they are used as markers for splitting.",
+        "detail": "Tests.4_Speak",
+        "documentation": {}
+    },
+    {
+        "label": "acronyms",
+        "kind": 5,
+        "importPath": "Tests.4_Speak",
+        "description": "Tests.4_Speak",
+        "peekOfCode": "acronyms = \"([A-Z][.][A-Z][.](?:[A-Z][.])?)\"\nwebsites = \"[.](com|net|org|io|gov|edu|me)\"\ndigits = \"([0-9])\"\nmultiple_dots = r'\\.{2,}'\ndef split(text: str) -> list[str]:\n    \"\"\"\n    Split the text into sentences.\n    If the text contains substrings \"<prd>\" or \"<stop>\", they would lead \n    to incorrect splitting because they are used as markers for splitting.\n    :param text: text to be split into sentences",
+        "detail": "Tests.4_Speak",
+        "documentation": {}
+    },
+    {
+        "label": "websites",
+        "kind": 5,
+        "importPath": "Tests.4_Speak",
+        "description": "Tests.4_Speak",
+        "peekOfCode": "websites = \"[.](com|net|org|io|gov|edu|me)\"\ndigits = \"([0-9])\"\nmultiple_dots = r'\\.{2,}'\ndef split(text: str) -> list[str]:\n    \"\"\"\n    Split the text into sentences.\n    If the text contains substrings \"<prd>\" or \"<stop>\", they would lead \n    to incorrect splitting because they are used as markers for splitting.\n    :param text: text to be split into sentences\n    :type text: str",
+        "detail": "Tests.4_Speak",
+        "documentation": {}
+    },
+    {
+        "label": "digits",
+        "kind": 5,
+        "importPath": "Tests.4_Speak",
+        "description": "Tests.4_Speak",
+        "peekOfCode": "digits = \"([0-9])\"\nmultiple_dots = r'\\.{2,}'\ndef split(text: str) -> list[str]:\n    \"\"\"\n    Split the text into sentences.\n    If the text contains substrings \"<prd>\" or \"<stop>\", they would lead \n    to incorrect splitting because they are used as markers for splitting.\n    :param text: text to be split into sentences\n    :type text: str\n    :return: list of sentences",
+        "detail": "Tests.4_Speak",
+        "documentation": {}
+    },
+    {
+        "label": "multiple_dots",
+        "kind": 5,
+        "importPath": "Tests.4_Speak",
+        "description": "Tests.4_Speak",
+        "peekOfCode": "multiple_dots = r'\\.{2,}'\ndef split(text: str) -> list[str]:\n    \"\"\"\n    Split the text into sentences.\n    If the text contains substrings \"<prd>\" or \"<stop>\", they would lead \n    to incorrect splitting because they are used as markers for splitting.\n    :param text: text to be split into sentences\n    :type text: str\n    :return: list of sentences\n    :rtype: list[str]",
+        "detail": "Tests.4_Speak",
+        "documentation": {}
+    },
+    {
+        "label": "Initialise",
+        "kind": 2,
+        "importPath": "Tests.main",
+        "description": "Tests.main",
+        "peekOfCode": "def Initialise():\n  keyboard.press_and_release(\"win+up\")\n  print(\"Connected 🚀🚀🚀\")\n  Jarvis()\n#? Main function\n# @eel.expose\ndef Jarvis():\n  porcupine = None\n  pa = None\n  audio_stream = None",
+        "detail": "Tests.main",
+        "documentation": {}
+    },
+    {
+        "label": "Jarvis",
+        "kind": 2,
+        "importPath": "Tests.main",
+        "description": "Tests.main",
+        "peekOfCode": "def Jarvis():\n  porcupine = None\n  pa = None\n  audio_stream = None\n  print(\"Jarvis is now listening....\")\n  try:\n    porcupine = pvporcupine.create(keywords=['jarvis'])\n    pa = pyaudio.PyAudio()\n    audio_stream = pa.open( rate=porcupine.sample_rate, channels=1, format=pyaudio.paInt16, input=True, frames_per_buffer=porcupine.frame_length )\n    while True:",
+        "detail": "Tests.main",
         "documentation": {}
     },
     {
@@ -1792,30 +1900,12 @@
         "documentation": {}
     },
     {
-        "label": "Initialise",
-        "kind": 2,
-        "importPath": "main",
-        "description": "main",
-        "peekOfCode": "def Initialise():\n  keyboard.press_and_release(\"win+up\")\n  print(\"Connected 🚀🚀🚀\")\n  Jarvis()\n#? Main function\n# @eel.expose\ndef Jarvis():\n  porcupine = None\n  pa = None\n  audio_stream = None",
-        "detail": "main",
-        "documentation": {}
-    },
-    {
         "label": "Jarvis",
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def Jarvis():\n  porcupine = None\n  pa = None\n  audio_stream = None\n  print(\"Jarvis is now listening....\")\n  try:\n    porcupine = pvporcupine.create(keywords=['jarvis'])\n    pa = pyaudio.PyAudio()\n    audio_stream = pa.open( rate=porcupine.sample_rate, channels=1, format=pyaudio.paInt16, input=True, frames_per_buffer=porcupine.frame_length )\n    while True:",
-        "detail": "main",
-        "documentation": {}
-    },
-    {
-        "label": "Jarvis",
-        "kind": 2,
-        "importPath": "main1",
-        "description": "main1",
         "peekOfCode": "def Jarvis():\n  print(\"\\n🚀: Connected Jarvis with GUI\")\n  if FULLSCREEN: keyboard.press_and_release(\"win+up\")\n  playsound(f\"{os.getcwd()}\\\\Assets\\\\Sounds\\\\Start.mp3\", False)  \n  import time\n  time.sleep(1)\n  eel.ShowIntro() #type: ignore #! Removing the start intro animation not found error.\n  eel.showMainWindow() #type: ignore #! Removing the start intro animation not found error.\n  for file in os.listdir(os.getcwd() + \"\\\\Audio\"):  \n    if file.endswith(\".mp3\") and file != \"music.mp3\": os.remove(os.path.join(os.getcwd() + \"\\\\Audio\", file))",
-        "detail": "main1",
+        "detail": "main",
         "documentation": {}
     },
     {
