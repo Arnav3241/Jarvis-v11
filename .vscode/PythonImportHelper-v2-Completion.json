@@ -428,7 +428,7 @@
         "kind": 5,
         "importPath": "Functions.Listen.listen",
         "description": "Functions.Listen.listen",
-        "peekOfCode": "os.environ['WDM_LOG'] = '0'\nservice = Service(ChromeDriverManager().install())\nchrome_options = webdriver.ChromeOptions()\nchrome_options.add_argument(\"--use-fake-ui-for-media-stream\")\nchrome_options.add_argument(\"--headless=new\")\ndriver = webdriver.Chrome(service=service, options=chrome_options)\nwebsite = f\"{getcwd()}//Functions//Listen2//Recognition//index.html\"\ndriver.get(website)\ndef Listen():\n  driver.get(website)",
+        "peekOfCode": "os.environ['WDM_LOG'] = '0'\nservice = Service(ChromeDriverManager().install())\nchrome_options = webdriver.ChromeOptions()\nchrome_options.add_argument(\"--use-fake-ui-for-media-stream\")\nchrome_options.add_argument(\"--headless=new\")\ndriver = webdriver.Chrome(service=service, options=chrome_options)\nwebsite = f\"{getcwd()}//Functions//Listen//Recognition//index.html\"\ndriver.get(website)\ndef Listen():\n  driver.get(website)",
         "detail": "Functions.Listen.listen",
         "documentation": {}
     },
@@ -437,7 +437,7 @@
         "kind": 5,
         "importPath": "Functions.Listen.listen",
         "description": "Functions.Listen.listen",
-        "peekOfCode": "service = Service(ChromeDriverManager().install())\nchrome_options = webdriver.ChromeOptions()\nchrome_options.add_argument(\"--use-fake-ui-for-media-stream\")\nchrome_options.add_argument(\"--headless=new\")\ndriver = webdriver.Chrome(service=service, options=chrome_options)\nwebsite = f\"{getcwd()}//Functions//Listen2//Recognition//index.html\"\ndriver.get(website)\ndef Listen():\n  driver.get(website)\n  driver.find_element(by=By.ID, value='start').click()",
+        "peekOfCode": "service = Service(ChromeDriverManager().install())\nchrome_options = webdriver.ChromeOptions()\nchrome_options.add_argument(\"--use-fake-ui-for-media-stream\")\nchrome_options.add_argument(\"--headless=new\")\ndriver = webdriver.Chrome(service=service, options=chrome_options)\nwebsite = f\"{getcwd()}//Functions//Listen//Recognition//index.html\"\ndriver.get(website)\ndef Listen():\n  driver.get(website)\n  driver.find_element(by=By.ID, value='start').click()",
         "detail": "Functions.Listen.listen",
         "documentation": {}
     },
@@ -446,7 +446,7 @@
         "kind": 5,
         "importPath": "Functions.Listen.listen",
         "description": "Functions.Listen.listen",
-        "peekOfCode": "chrome_options = webdriver.ChromeOptions()\nchrome_options.add_argument(\"--use-fake-ui-for-media-stream\")\nchrome_options.add_argument(\"--headless=new\")\ndriver = webdriver.Chrome(service=service, options=chrome_options)\nwebsite = f\"{getcwd()}//Functions//Listen2//Recognition//index.html\"\ndriver.get(website)\ndef Listen():\n  driver.get(website)\n  driver.find_element(by=By.ID, value='start').click()\n  print(\"Listening ...\")",
+        "peekOfCode": "chrome_options = webdriver.ChromeOptions()\nchrome_options.add_argument(\"--use-fake-ui-for-media-stream\")\nchrome_options.add_argument(\"--headless=new\")\ndriver = webdriver.Chrome(service=service, options=chrome_options)\nwebsite = f\"{getcwd()}//Functions//Listen//Recognition//index.html\"\ndriver.get(website)\ndef Listen():\n  driver.get(website)\n  driver.find_element(by=By.ID, value='start').click()\n  print(\"Listening ...\")",
         "detail": "Functions.Listen.listen",
         "documentation": {}
     },
@@ -455,7 +455,7 @@
         "kind": 5,
         "importPath": "Functions.Listen.listen",
         "description": "Functions.Listen.listen",
-        "peekOfCode": "driver = webdriver.Chrome(service=service, options=chrome_options)\nwebsite = f\"{getcwd()}//Functions//Listen2//Recognition//index.html\"\ndriver.get(website)\ndef Listen():\n  driver.get(website)\n  driver.find_element(by=By.ID, value='start').click()\n  print(\"Listening ...\")\n  while True:\n    text = driver.find_element(by=By.ID, value='output').text\n    if text != \"\":",
+        "peekOfCode": "driver = webdriver.Chrome(service=service, options=chrome_options)\nwebsite = f\"{getcwd()}//Functions//Listen//Recognition//index.html\"\ndriver.get(website)\ndef Listen():\n  driver.get(website)\n  driver.find_element(by=By.ID, value='start').click()\n  print(\"Listening ...\")\n  while True:\n    text = driver.find_element(by=By.ID, value='output').text\n    if text != \"\":",
         "detail": "Functions.Listen.listen",
         "documentation": {}
     },
@@ -464,7 +464,7 @@
         "kind": 5,
         "importPath": "Functions.Listen.listen",
         "description": "Functions.Listen.listen",
-        "peekOfCode": "website = f\"{getcwd()}//Functions//Listen2//Recognition//index.html\"\ndriver.get(website)\ndef Listen():\n  driver.get(website)\n  driver.find_element(by=By.ID, value='start').click()\n  print(\"Listening ...\")\n  while True:\n    text = driver.find_element(by=By.ID, value='output').text\n    if text != \"\":\n      print(f\"You : {text}\")",
+        "peekOfCode": "website = f\"{getcwd()}//Functions//Listen//Recognition//index.html\"\ndriver.get(website)\ndef Listen():\n  driver.get(website)\n  driver.find_element(by=By.ID, value='start').click()\n  print(\"Listening ...\")\n  while True:\n    text = driver.find_element(by=By.ID, value='output').text\n    if text != \"\":\n      print(f\"You : {text}\")",
         "detail": "Functions.Listen.listen",
         "documentation": {}
     },
