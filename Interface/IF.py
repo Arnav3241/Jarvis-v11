@@ -7,4 +7,5 @@ import eel
 def PrintPyLog(*args):
   statement = ""
   for i in args: statement += str(i) + " "
-  print(f"#JS-Log: {statement}")
+  print()
+  print(f"💻: {statement}")

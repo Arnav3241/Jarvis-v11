@@ -16,6 +16,22 @@
         "documentation": {}
     },
     {
+        "label": "ChromeDriverManager",
+        "importPath": "webdriver_manager.chrome",
+        "description": "webdriver_manager.chrome",
+        "isExtraImport": true,
+        "detail": "webdriver_manager.chrome",
+        "documentation": {}
+    },
+    {
+        "label": "Service",
+        "importPath": "selenium.webdriver.chrome.service",
+        "description": "selenium.webdriver.chrome.service",
+        "isExtraImport": true,
+        "detail": "selenium.webdriver.chrome.service",
+        "documentation": {}
+    },
+    {
         "label": "Service",
         "importPath": "selenium.webdriver.chrome.service",
         "description": "selenium.webdriver.chrome.service",
@@ -61,6 +77,22 @@
         "description": "selenium.webdriver.common.by",
         "isExtraImport": true,
         "detail": "selenium.webdriver.common.by",
+        "documentation": {}
+    },
+    {
+        "label": "By",
+        "importPath": "selenium.webdriver.common.by",
+        "description": "selenium.webdriver.common.by",
+        "isExtraImport": true,
+        "detail": "selenium.webdriver.common.by",
+        "documentation": {}
+    },
+    {
+        "label": "webdriver",
+        "importPath": "selenium",
+        "description": "selenium",
+        "isExtraImport": true,
+        "detail": "selenium",
         "documentation": {}
     },
     {
@@ -119,6 +151,24 @@
         "importPath": "warnings",
         "description": "warnings",
         "detail": "warnings",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
         "documentation": {}
     },
     {
@@ -183,15 +233,6 @@
         "documentation": {}
     },
     {
-        "label": "time",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "time",
-        "description": "time",
-        "detail": "time",
-        "documentation": {}
-    },
-    {
         "label": "ollama",
         "kind": 6,
         "isExtraImport": true,
@@ -236,12 +277,28 @@
         "documentation": {}
     },
     {
-        "label": "json",
+        "label": "playsound",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "json",
-        "description": "json",
-        "detail": "json",
+        "importPath": "playsound",
+        "description": "playsound",
+        "detail": "playsound",
+        "documentation": {}
+    },
+    {
+        "label": "playsound",
+        "importPath": "playsound",
+        "description": "playsound",
+        "isExtraImport": true,
+        "detail": "playsound",
+        "documentation": {}
+    },
+    {
+        "label": "playsound",
+        "importPath": "playsound",
+        "description": "playsound",
+        "isExtraImport": true,
+        "detail": "playsound",
         "documentation": {}
     },
     {
@@ -327,10 +384,34 @@
     },
     {
         "label": "*",
+        "importPath": "Functions.Listen.listen",
+        "description": "Functions.Listen.listen",
+        "isExtraImport": true,
+        "detail": "Functions.Listen.listen",
+        "documentation": {}
+    },
+    {
+        "label": "*",
         "importPath": "Interface.IF",
         "description": "Interface.IF",
         "isExtraImport": true,
         "detail": "Interface.IF",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "Interface.IF",
+        "description": "Interface.IF",
+        "isExtraImport": true,
+        "detail": "Interface.IF",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "Global.vars",
+        "description": "Global.vars",
+        "isExtraImport": true,
+        "detail": "Global.vars",
         "documentation": {}
     },
     {
@@ -388,6 +469,24 @@
         "documentation": {}
     },
     {
+        "label": "setup",
+        "kind": 2,
+        "importPath": "Functions.Speak.speak",
+        "description": "Functions.Speak.speak",
+        "peekOfCode": "def setup():\n  with open(f\"{os.getcwd()}\\\\env.local.json\", 'r') as j:\n    env = json.loads(j.read())\n  service = Service(ChromeDriverManager().install())\n  driver = webdriver.Chrome(service=service)\n  driver.set_window_position(-10000, 0)\n  website = \"https://pi.ai/talk\"\n  driver.get(website)\n  time.sleep(3)\n  driver.find_element(by=By.XPATH, value=\"//*[@id=\\\"__next\\\"]/main/div/div/button\").click()",
+        "detail": "Functions.Speak.speak",
+        "documentation": {}
+    },
+    {
+        "label": "speak",
+        "kind": 2,
+        "importPath": "Functions.Speak.speak",
+        "description": "Functions.Speak.speak",
+        "peekOfCode": "def speak(driver, msg):\n  driver.find_element(by=By.XPATH, value=\"//*[@id=\\\"__next\\\"]/main/div/div/div[3]/div[1]/div[4]/div/div/textarea\").send_keys(f\"Reply with what is in the quotes AND NOTHING ELSE. \\\"{msg}\\\"\")\n  time.sleep(1)\n  driver.find_element(by=By.XPATH, value=\"//*[@id=\\\"__next\\\"]/main/div/div/div[3]/div[1]/div[4]/div/button\").click()\n  driver.find_element(by=By.XPATH, value=\"//*[@id=\\\"__next\\\"]/main/div/div/div[3]/div[1]/div[4]/div/button\").click()\n  driver.find_element(by=By.XPATH, value=\"//*[@id=\\\"__next\\\"]/main/div/div/div[3]/div[1]/div[4]/div/button\").click()\nif __name__ == '__main__':\n  print('Initiating setup....')\n  driver = setup()\n  print('Setup Complete!')",
+        "detail": "Functions.Speak.speak",
+        "documentation": {}
+    },
+    {
         "label": "wake",
         "kind": 2,
         "importPath": "Functions.Wake.wake",
@@ -397,11 +496,20 @@
         "documentation": {}
     },
     {
+        "label": "FULLSCREEN",
+        "kind": 5,
+        "importPath": "Global.vars",
+        "description": "Global.vars",
+        "peekOfCode": "FULLSCREEN = True",
+        "detail": "Global.vars",
+        "documentation": {}
+    },
+    {
         "label": "PrintPyLog",
         "kind": 2,
         "importPath": "Interface.IF",
         "description": "Interface.IF",
-        "peekOfCode": "def PrintPyLog(*args):\n  statement = \"\"\n  for i in args: statement += str(i) + \" \"\n  print(f\"#JS-Log: {statement}\")",
+        "peekOfCode": "def PrintPyLog(*args):\n  statement = \"\"\n  for i in args: statement += str(i) + \" \"\n  print()\n  print(f\"💻: {statement}\")",
         "detail": "Interface.IF",
         "documentation": {}
     },
@@ -496,39 +604,30 @@
         "documentation": {}
     },
     {
-        "label": "service",
-        "kind": 5,
+        "label": "setup",
+        "kind": 2,
         "importPath": "Tests.2_Speak",
         "description": "Tests.2_Speak",
-        "peekOfCode": "service = Service(ChromeDriverManager().install())\ndriver = webdriver.Chrome(service=service)\nwebsite = \"https://pi.ai/talk\"\ntext = \"To calculate the probability of winning more than one giveaway, we can use the binomial probability formula.\"\ndriver.get(website)\ntime.sleep(3)\ndriver.find_element(by=By.XPATH, value=\"//*[@id=\\\"__next\\\"]/main/div/div/button\").click()\ntime.sleep(3)\ndriver.find_element(by=By.XPATH, value=\"//*[@id=\\\"__next\\\"]/main/div/div/button\").click()\ntime.sleep(3)",
+        "peekOfCode": "def setup():\n  with open(f\"{os.getcwd()}\\\\env.local.json\", 'r') as j:\n    env = json.loads(j.read())\n  service = Service(ChromeDriverManager().install())\n  driver = webdriver.Chrome(service=service)\n  driver.set_window_position(-10000, 0)\n  website = \"https://pi.ai/talk\"\n  driver.get(website)\n  time.sleep(3)\n  driver.find_element(by=By.XPATH, value=\"//*[@id=\\\"__next\\\"]/main/div/div/button\").click()",
         "detail": "Tests.2_Speak",
         "documentation": {}
     },
     {
-        "label": "driver",
-        "kind": 5,
+        "label": "speak",
+        "kind": 2,
         "importPath": "Tests.2_Speak",
         "description": "Tests.2_Speak",
-        "peekOfCode": "driver = webdriver.Chrome(service=service)\nwebsite = \"https://pi.ai/talk\"\ntext = \"To calculate the probability of winning more than one giveaway, we can use the binomial probability formula.\"\ndriver.get(website)\ntime.sleep(3)\ndriver.find_element(by=By.XPATH, value=\"//*[@id=\\\"__next\\\"]/main/div/div/button\").click()\ntime.sleep(3)\ndriver.find_element(by=By.XPATH, value=\"//*[@id=\\\"__next\\\"]/main/div/div/button\").click()\ntime.sleep(3)\ndriver.find_element(by=By.XPATH, value=\"//*[@id=\\\"__next\\\"]/main/div/div/div[1]/div[1]/div[2]/button[2]\").click()",
+        "peekOfCode": "def speak(driver, msg):\n  driver.find_element(by=By.XPATH, value=\"//*[@id=\\\"__next\\\"]/main/div/div/div[3]/div[1]/div[4]/div/div/textarea\").send_keys(f\"Reply with what is in the quotes AND NOTHING ELSE. \\\"{msg}\\\"\")\n  time.sleep(1)\n  driver.find_element(by=By.XPATH, value=\"//*[@id=\\\"__next\\\"]/main/div/div/div[3]/div[1]/div[4]/div/button\").click()\n  driver.find_element(by=By.XPATH, value=\"//*[@id=\\\"__next\\\"]/main/div/div/div[3]/div[1]/div[4]/div/button\").click()\n  driver.find_element(by=By.XPATH, value=\"//*[@id=\\\"__next\\\"]/main/div/div/div[3]/div[1]/div[4]/div/button\").click()\nif __name__ == '__main__':\n  print('Initiating setup....')\n  driver = setup()\n  print('Setup Complete!')",
         "detail": "Tests.2_Speak",
         "documentation": {}
     },
     {
-        "label": "website",
-        "kind": 5,
-        "importPath": "Tests.2_Speak",
-        "description": "Tests.2_Speak",
-        "peekOfCode": "website = \"https://pi.ai/talk\"\ntext = \"To calculate the probability of winning more than one giveaway, we can use the binomial probability formula.\"\ndriver.get(website)\ntime.sleep(3)\ndriver.find_element(by=By.XPATH, value=\"//*[@id=\\\"__next\\\"]/main/div/div/button\").click()\ntime.sleep(3)\ndriver.find_element(by=By.XPATH, value=\"//*[@id=\\\"__next\\\"]/main/div/div/button\").click()\ntime.sleep(3)\ndriver.find_element(by=By.XPATH, value=\"//*[@id=\\\"__next\\\"]/main/div/div/div[1]/div[1]/div[2]/button[2]\").click()\ntime.sleep(3)",
-        "detail": "Tests.2_Speak",
-        "documentation": {}
-    },
-    {
-        "label": "text",
-        "kind": 5,
-        "importPath": "Tests.2_Speak",
-        "description": "Tests.2_Speak",
-        "peekOfCode": "text = \"To calculate the probability of winning more than one giveaway, we can use the binomial probability formula.\"\ndriver.get(website)\ntime.sleep(3)\ndriver.find_element(by=By.XPATH, value=\"//*[@id=\\\"__next\\\"]/main/div/div/button\").click()\ntime.sleep(3)\ndriver.find_element(by=By.XPATH, value=\"//*[@id=\\\"__next\\\"]/main/div/div/button\").click()\ntime.sleep(3)\ndriver.find_element(by=By.XPATH, value=\"//*[@id=\\\"__next\\\"]/main/div/div/div[1]/div[1]/div[2]/button[2]\").click()\ntime.sleep(3)\ndriver.find_element(by=By.XPATH, value=\"//*[@id=\\\"__next\\\"]/main/div/div/div/div/div/div[1]/div/div[1]/button[2]\").click()",
-        "detail": "Tests.2_Speak",
+        "label": "speak",
+        "kind": 2,
+        "importPath": "Tests.3_Speak",
+        "description": "Tests.3_Speak",
+        "peekOfCode": "def speak(Text:str, GetTimeComplexity:bool=False, Voice:str=\"en-US-SteffanNeural\", Media:str=os.getcwd()):\n  \"A function that converts Text to Speech with Realestic Voices. Some Voices That you can select other than the default are: \"\n  st = time.time()\n  command = f'edge-tts --voice \"{Voice}\" --text \"{Text}\" --write-media \"{os.getcwd()}\\\\Audio\\\\{st}.mp3\"'\n  os.system(command)\n  et = time.time() - st\n  if GetTimeComplexity == True: print(f\"The time complexity of speak is {et} seconds\")\n  try: playsound.playsound(f\"{os.getcwd()}\\\\Audio\\\\{st}.mp3\")\n  except: print(\"Unsuccessful at playing Sound: Playsound error\")\nif __name__ == \"__main__\": ",
+        "detail": "Tests.3_Speak",
         "documentation": {}
     },
     {
@@ -536,7 +635,7 @@
         "kind": 2,
         "importPath": "Tests.playsoundT",
         "description": "Tests.playsoundT",
-        "peekOfCode": "def play_mp3(file_path):\n    playsound(file_path)\n# Example usage\nmp3_file = \"/path/to/your/file.mp3\"\nplay_mp3(mp3_file)",
+        "peekOfCode": "def play_mp3(file_path):\n    playsound(file_path)\n# Example usage\nmp3_file = \"Audio\\\\data.mp3\"\nplay_mp3(\"E:\\\\Jarvis-v11\\\\Audio\\\\data.mp3\")",
         "detail": "Tests.playsoundT",
         "documentation": {}
     },
@@ -545,7 +644,7 @@
         "kind": 5,
         "importPath": "Tests.playsoundT",
         "description": "Tests.playsoundT",
-        "peekOfCode": "mp3_file = \"/path/to/your/file.mp3\"\nplay_mp3(mp3_file)",
+        "peekOfCode": "mp3_file = \"Audio\\\\data.mp3\"\nplay_mp3(\"E:\\\\Jarvis-v11\\\\Audio\\\\data.mp3\")",
         "detail": "Tests.playsoundT",
         "documentation": {}
     },
@@ -1697,7 +1796,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def Initialise():\n  keyboard.press_and_release(\"win+up\")\n  print(\"Connected 🚀🚀🚀\")\n  Jarvis()\n#? Main function\n# @eel.expose\ndef Jarvis():\n  time.sleep(2)\n  eel.showMainWindow()\n  time.sleep(2)",
+        "peekOfCode": "def Initialise():\n  keyboard.press_and_release(\"win+up\")\n  print(\"Connected 🚀🚀🚀\")\n  Jarvis()\n#? Main function\n# @eel.expose\ndef Jarvis():\n  porcupine = None\n  pa = None\n  audio_stream = None",
         "detail": "main",
         "documentation": {}
     },
@@ -1706,8 +1805,26 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def Jarvis():\n  time.sleep(2)\n  eel.showMainWindow()\n  time.sleep(2)\n  eel.showWakeWindow()\n  time.sleep(2)\n  eel.showMainWindow()\n#? Main Execution\nif __name__ == '__main__': \n  try: eel.start(\"index.html\", mode='chrome', size=(1500, 1200)) ",
+        "peekOfCode": "def Jarvis():\n  porcupine = None\n  pa = None\n  audio_stream = None\n  print(\"Jarvis is now listening....\")\n  try:\n    porcupine = pvporcupine.create(keywords=['jarvis'])\n    pa = pyaudio.PyAudio()\n    audio_stream = pa.open( rate=porcupine.sample_rate, channels=1, format=pyaudio.paInt16, input=True, frames_per_buffer=porcupine.frame_length )\n    while True:",
         "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "Jarvis",
+        "kind": 2,
+        "importPath": "main1",
+        "description": "main1",
+        "peekOfCode": "def Jarvis():\n  print(\"\\n🚀: Connected Jarvis with GUI\")\n  if FULLSCREEN: keyboard.press_and_release(\"win+up\")\n  playsound(f\"{os.getcwd()}\\\\Assets\\\\Sounds\\\\Start.mp3\", False)  \n  import time\n  time.sleep(1)\n  eel.ShowIntro() #type: ignore #! Removing the start intro animation not found error.\n  eel.showMainWindow() #type: ignore #! Removing the start intro animation not found error.\n  for file in os.listdir(os.getcwd() + \"\\\\Audio\"):  \n    if file.endswith(\".mp3\") and file != \"music.mp3\": os.remove(os.path.join(os.getcwd() + \"\\\\Audio\", file))",
+        "detail": "main1",
+        "documentation": {}
+    },
+    {
+        "label": "o",
+        "kind": 5,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "o = 0\neel.start(\"index.html\", block=False)\nwhile True:\n    eel.sleep(1)\n    print(o)\n    o += 10",
+        "detail": "test",
         "documentation": {}
     }
 ]

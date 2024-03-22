@@ -62,7 +62,15 @@ async def Speak(*args, Model: str = "echo", Speed: float = 0.95):
 
 if __name__ == "__main__":
   asyncio.run(Speak("""
-Who am I? I am wearing a green shirt.
+Self-management, which is also referred to as ‘selfcontrol’ or ‘self-regulation’, is the ability to regulate
+one’s emotions, thoughts, and behaviour effectively
+in different situations. This includes motivating
+oneself, and setting and working towards personal and
+academic goals. Students with strong self-management
+skills are able to do different activities effectively,
+including managing their timelines, focusing on their
+tasks, cooperating with others in school and at home
+and perform better in their studies. It help
 """))
   time.sleep(20)
   # asyncio.run(Speak("Hello world"))
