@@ -19,6 +19,9 @@
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0" />
   </script>
 
+  <!-- Siri Wave -->
+  <script src="https://unpkg.com/siriwave/dist/siriwave.umd.min.js"></script>
+
   <!-- Tainwind CSS Configeration -->
   <script>
     tailwind.config = {
@@ -33,7 +36,8 @@
 </head>
 
 <body>
-  <div id="preRender" class="text-4xl w-{100%] text-slate-200 Intro bg-[#131314] flex items-center justify-center h-screen"></div>
+  <div id="preRender"
+    class="text-4xl w-{100%] text-slate-200 Intro bg-[#131314] flex items-center justify-center h-screen"></div>
   <div id="intro" class="text-4xl w-{100%] text-slate-200 Intro bg-[#131314] flex items-center justify-center h-screen">
     <div class="flex justify-center items-center h-screen">
       <div class=" p-5 rounded-xl flex">
@@ -46,12 +50,14 @@
         </div>
       </div>
     </div>
-  </div> 
+  </div>
   <div id="main" class="h-[100vh] w-[100vw] text-slate-200 Main bg-black">
     <div id="Sidebar" class="w-[64px] z-10 h-[100vh] bg-[#1e1f20] absolute left-0">
       <img src="Assets/Logo.png" class="me-3 w-[58px] rounded-full m-2" alt="Jarvis" />
       <div class="flex -rotate-90 relative mt-[570px] w-[10vh] ">
-        <p id="title-text" class="text-transparent text-4xl font-bold px-3 bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-500 bg-clip-text bg-[linear-gradient(to_right,#818cf8,#e0e7ff,#38bdf8,#e879f9,#38bdf8,#e0e7ff,#818cf8)]"> Jarvis </p>
+        <p id="title-text"
+          class="text-transparent text-4xl font-bold px-3 bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-500 bg-clip-text bg-[linear-gradient(to_right,#818cf8,#e0e7ff,#38bdf8,#e879f9,#38bdf8,#e0e7ff,#818cf8)]">
+          Jarvis </p>
         <!-- <p id="title-text" class="text-4xl font-bold px-3 text-slate-400"> Jarvis </p> -->
       </div>
     </div>
@@ -77,8 +83,26 @@
         </div>
       </div>
     </div>
-    <div id="wake_window" class="bg-blue-400 w-full z-0 pl-[100px] p-[20px] h-[100vh] absolute right-0">
-      Hello Worhjudsfnbviusebd
+    <div id="wake_window" class="bg-black w-full z-0 pl-[100px] p-[20px] h-[100vh] absolute right-0">
+      <div id="siri-container"></div>
+      <script>
+        var siriWave = new SiriWave({
+          container: document.getElementById("siri-container"),
+          width: 1400,
+          height: 700,
+          // style: "ios9",
+          curveDefinition: [
+            { attenuation: -2, lineWidth: 1, opacity: 0.1 },
+            { attenuation: -6, lineWidth: 1, opacity: 0.2 },
+            { attenuation: 4, lineWidth: 1, opacity: 0.4 },
+            { attenuation: 2, lineWidth: 1, opacity: 0.6 },
+            { attenuation: 1, lineWidth: 1.5, opacity: 1 },
+          ]
+        });
+      </script>
+      <div class="w-full h-[8vh] text-lg text-slate-200 relative flex items-center justify-center text-center max-h-[2vh]">
+        <div id="RecOutput" class="p-2 px-5 rounded bg-slate-800"></div>
+      </div>
     </div>
   </div>
 </body>

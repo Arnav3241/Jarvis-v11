@@ -20,6 +20,28 @@ function showWakeWindow() { eel.PrintPyLog("Showing", "Wake Window"); document.g
 eel.expose(showMainWindow);
 eel.expose(showWakeWindow);
 
+const RecognitionOutput = document.getElementById('RecOutput');
+let recognition;
+
+function Recognition() {
+  RecognitionOutput.innerHTML = "Listning...";
+  recognition = new webkitSpeechRecognition() || new SpeechRecognition();
+  recognition.lang = 'en-IN';
+  recognition.continuous = true;
+
+  recognition.onresult = function(event) {
+    eel.PrintPyLog("Transcript", transcript);
+    const transcript = event.results[event.results.length - 1][0].transcript;
+    RecognitionOutput.textContent += transcript;
+  };
+  recognition.onend = function() {
+    recognition.start();
+  };
+  recognition.start();
+}
+
+eel.expose(Recognition);
+
 //? Main Programme Running:
 window.addEventListener("DOMContentLoaded", () => {
   console.log("🚀: DOM Loaded")

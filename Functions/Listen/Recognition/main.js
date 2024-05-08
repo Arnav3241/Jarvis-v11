@@ -3,7 +3,7 @@
 const output = document.getElementById('output');
 let recognition;
 
-const Recognition = () => {
+const Recognition = () => { 
   recognition = new webkitSpeechRecognition() || new SpeechRecognition();
   recognition.lang = 'en-IN';
   recognition.continuous = true;

@@ -1,0 +1,7 @@
+1. Create a listen function is JS.
+
+2. Make it such that we can call it in python.
+
+3. Represent it on the screen (res).
+
+4. Try to make the listen waves be controlled by voice.
